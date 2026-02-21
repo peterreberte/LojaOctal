@@ -4,21 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Octal, o Maior E-commerce de produtos de tecnologia da América Latina. Marcas: Logitech, Playstation, Apple, Nvidia.">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/Logo O Favicon.ico" type="image/x-icon">
     <title>Octal | Ofertas Tech em outro nível!</title>
 </head>
 
 <body>
-    <header>
-        <div class="logo-octal">Octal</div>
-
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="carrinho.html">Carrinho</a></li> <!--ainda não adicionado-->
-            </ul>
-        </nav>
+    <header class="header">
+        <section>
+            <a href="#" class="logo">
+                <img src="images/Logo O.png" alt="logo">
+            </a>
+        
+        
+            <nav class="barra-de-navegacao">
+                <a href="produtos.html">Produtos</a>
+                <a href="carrinho.html">Carrinho</a> <!--ainda não adicionado-->
+                <a href="login.html">Entre ou Cadastre-se</a> <!--ainda não adicionado-->
+                <a href="sobre.html">Produtos</a>
+        
+            </nav>
+        
+            <div class="icones">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/laptop.png" alt="produtos" />
+        
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/shopping-cart--v1.png" alt="carrinho" />
+        
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/user--v1.png" alt="login" />
+        
+                <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/search.png" alt="pesquisar" />
+            </div>
+        </section>
     </header> 
 
     <main>
@@ -29,7 +45,7 @@
         </section>
 
         <section>
-            <h2>Produtos em Destaque</h2>
+            <h2>Destaques</h2>
 
             <article>
                 <h3><a href="playstation5.html">Console PlayStation 5 Pro Sony, SSD 2TB, Branco</a></h3>
@@ -37,6 +53,8 @@
                 <p><s>R$ 6.999,99</s><br>
                 <strong>R$ 5.586,07</strong><br>
                 Em até 12x de <strong>R$ 465,51</strong> sem juros</p>
+                <button class="btn-adicionar-carrinho">Adicionar ao Carrinho</button>
+                <button class="favoritar">Favoritar</button>
             </article>
 
             <article>
@@ -45,6 +63,8 @@
                 <p><s>R$ 3.499,99</s><br>
                 <strong>R$ 2.199,99</strong><br>
                 Em até 10x de <strong>R$ 219,99</strong> sem juros</p>
+                <button class="btn-adicionar-carrinho">Adicionar ao Carrinho</button>
+                <button class="favoritar">Favoritar</button>
             </article>
 
         </section>
