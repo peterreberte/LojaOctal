@@ -4,68 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Octal, o Maior E-commerce de produtos de tecnologia da América Latina. Marcas: Logitech, Playstation, Apple, Nvidia.">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/Logo O Favicon.ico" type="image/x-icon">
     <title>Octal | Ofertas Tech em outro nível!</title>
 </head>
-
+ 
 <body>
-
-    <header>
-        <div class="logo-octal">Octal</div>
-
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="carrinho.html">Carrinho</a></li> <!--ainda não adicionado-->
-                <li><a href="login.html">Entre ou Cadastre-se</a></li> <!--ainda não adicionado-->
-            </ul>
-        </nav>
+    <header class="header">
+        
+        <div class="header-inner">
+            <a href="index.html" class="logo" aria-label="Octal - Página inicial">
+                <img src="images/Logo O.png" alt="Logo Octal">
+            </a>
+ 
+            <nav class="navbar" aria-label="Navegação principal">
+                <a href="index.html">Home</a>
+                <a href="produtos.html">Produtos</a>      
+                <a href="carrinho.html">Carrinho</a>
+                <a href="login.html">Entre ou Cadastre-se</a>
+            </nav>
+ 
+            <div class="icons" aria-label="Ações rápidas">
+                <a href="carrinho.html" aria-label="Carrinho de compras">
+                    <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/30/shopping-cart--v1.png" alt="">
+                </a>
+                <a href="login.html" aria-label="Entrar ou cadastrar-se">
+                    <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/30/user--v1.png" alt="">
+                </a>
+                <button class="icon-btn" aria-label="Pesquisar">
+                    <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/search.png" alt="">
+                </button>
+            </div>
+        </div>
     </header> 
 
-    <p><strong>Você está em: </strong><a href="index.html">Home </a>&gt;<a href="produtos.html"> Produtos </a></p>
-
     <main>
-        <section>
-            <h1>Produtos</h1>
-            <article>
-                <h2><a href="playstation5.html">Console PlayStation 5 Pro Sony, SSD 2TB, Branco</a></h2>
-                <img src="images/Ps5.png" alt="PlayStation 5 Pro">
-                <p><s>R$ 6.999,99</s><br>
-                <strong>R$ 5.586,07</strong><br>
-                Em até 12x de <strong>R$ 465,51</strong> sem juros</p>
-                <button class="btn-adicionar-carrinho">Adicionar ao Carrinho</button>
-                <button class="favoritar">Favoritar</button>
-            </article>
-
-            <article>
-                <h2><a href="nvidiaRTX4060.html">Placa de Vídeo RTX 4060 Dual OC 8G White NVIDIA GeForce</a></h2>
-                <img src="images/RTX 4060.png" alt="Placa de Vídeo RTX 4060">
-                <p><s>R$ 3.499,99</s><br>
-                <strong>R$ 2.199,99</strong><br>
-                Em até 10x de <strong>R$ 219,99</strong> sem juros</p>
-                <button class="btn-adicionar-carrinho">Adicionar ao Carrinho</button>
-                <button class="favoritar">Favoritar</button>
-            </article>
+        
+        <nav class="breadcrumb" aria-label="Localização na página">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html" aria-current="page">Produtos</a></li>
+            </ol>
+        </nav>
+ 
+        
+        <section aria-labelledby="produtos-titulo">
+            <h1 id="produtos-titulo">Produtos</h1>
+ 
+            <div class="destaques-produtos">
+                <article class="produto-card">
+                    <h2>
+                        <a href="playstation5.html">Console PlayStation 5 Pro Sony, SSD 2TB, Branco</a>
+                    </h2>
+                    
+                    <img src="images/Ps5.png" alt="Console PlayStation 5 Pro Sony branco com SSD de 2TB" width="300" height="300">
+                    
+                    <div class="preco">
+                        <span class="preco-original">R$ 6.999,99</span>
+                        <strong class="preco-atual">R$ 5.586,07</strong>
+                        <span class="preco-parcelado">Em até 12x de <strong>R$ 465,51</strong> sem juros</span>
+                    </div>
+                    <div class="produto-acoes">
+                        <button class="btn-carrinho">Adicionar ao Carrinho</button>
+                        <button class="btn-favoritar" aria-label="Favoritar PlayStation 5 Pro">Favoritar</button>
+                    </div>
+                </article>
+ 
+                <article class="produto-card">
+                    <h2>
+                        <a href="nvidiaRTX4060.html">Placa de Vídeo RTX 4060 Dual OC 8G White NVIDIA GeForce</a>
+                    </h2>
+                    <img src="images/RTX 4060.png" alt="Placa de vídeo NVIDIA GeForce RTX 4060 Dual OC 8G branca" width="300" height="300">
+                    <div class="preco">
+                        <span class="preco-original">R$ 3.499,99</span>
+                        <strong class="preco-atual">R$ 2.199,99</strong>
+                        <span class="preco-parcelado">Em até 10x de <strong>R$ 219,99</strong> sem juros</span>
+                    </div>
+                    <div class="produto-acoes">
+                        <button class="btn-carrinho">Adicionar ao Carrinho</button>
+                        <button class="btn-favoritar" aria-label="Favoritar RTX 4060">Favoritar</button>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <section>
+    <footer class="footer">
+        <section class="footer-sobre" aria-label="Sobre a Octal">
             <h3>Octal</h3>
             <p>Os melhores eletrônicos com qualidade e preço baixo!</p>
         </section>
-
-        <section>
+ 
+        <section class="footer-atendimento" aria-label="Horários de atendimento">
             <h3>Atendimento</h3>
-            <p>08:00 às 20:00 - Segunda a Sexta;<br>
-                09:00 às 15:00 - Sábado;<br>
-                Horário de Brasília (exceto Domingo e feriados).</p>
-            <p><a href="contato.html">Fale Conosco</a></p>
+            
+            <ul>
+                <li>08:00 às 20:00 — Segunda a Sexta</li>
+                <li>09:00 às 15:00 — Sábado</li>
+                <li>Horário de Brasília (exceto Domingo e feriados)</li>
+            </ul>
+            <a href="contato.html">Fale Conosco</a>
         </section>
-
-        <p>&copy; 2026 Octal - Todos os direitos reservados.</p>
+ 
+        <div class="footer-copyright">
+            <p>&copy; 2026 Octal — Todos os direitos reservados.</p>
+        </div>
     </footer>
 </body>
-
+ 
 </html>

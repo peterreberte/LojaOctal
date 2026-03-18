@@ -4,99 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Octal, o Maior E-commerce de produtos de tecnologia da América Latina. Marcas: Logitech, Playstation, Apple, Nvidia.">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/Logo O Favicon.ico" type="image/x-icon">
     <title>Octal | Ofertas Tech em outro nível!</title>
 </head>
-
+ 
 <body>
-    <header>
-        <div class="logo-octal">Octal</div>
-
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="produtos.html">Produtos</a></li>
-                <li><a href="carrinho.html">Carrinho</a></li> <!--ainda não adicionado-->
-                <li><a href="login.html">Entre ou Cadastre-se</a></li> <!--ainda não adicionado-->
-            </ul>
-        </nav>
+    <header class="header">
+        
+        <div class="header-inner">
+            <a href="index.html" class="logo" aria-label="Octal - Página inicial">
+                <img src="images/Logo O.png" alt="Logo Octal">
+            </a>
+ 
+            <nav class="navbar" aria-label="Navegação principal">
+                <a href="index.html">Home</a>
+                <a href="produtos.html">Produtos</a>       
+                <a href="carrinho.html">Carrinho</a>
+                <a href="login.html">Entre ou Cadastre-se</a>
+            </nav>
+ 
+            <div class="icons" aria-label="Ações rápidas">
+                <a href="carrinho.html" aria-label="Carrinho de compras">
+                    <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/30/shopping-cart--v1.png" alt="">
+                </a>
+                <a href="login.html" aria-label="Entrar ou cadastrar-se">
+                    <img width="25" height="25" src="https://img.icons8.com/ios-glyphs/30/user--v1.png" alt="">
+                </a>
+                <button class="icon-btn" aria-label="Pesquisar">
+                    <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/search.png" alt="">
+                </button>
+            </div>
+        </div>
     </header>
     
-    <p><strong>Você está em: </strong><a href="index.html">Home </a>&gt; </strong><a href="contato.html">Fale Conosco</a></p>
-
     <main>
-
-        <section>
-        <h1>Fale Conosco</h1>
-        <p>Tem alguma dúvida ou sugestão? Envie sua mensagem para nossa equipe.</p>
-
-        <form action="#" method="post">
-
-            <div>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-            </div>
-
-            <div>
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-            <div>
-                <input type="radio" id="masculino">
-                <label for="masculino">M</label>
-            </div>
-
-            <div>
-                <input type="radio" id="feminino">
-                <label for="feminino">F</label>
-            </div>
-
-            <div>
-                <input type="radio" id="outros">
-                <label for="outros">Outros</label>
-            </div>
-
-            <div>
-                <label for="assunto">Assunto:</label>
-                <input type="text" id="assunto" name="assunto" required>
-            </div>
-
-            <div>
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-            </div>
-
-            <button type="submit">Enviar Mensagem</button>
-
-        </form>
-    </section>
-
-    <section>
-        <h2>Contato</h2>
-        <address>
-        Email: <a href="mailto:contato@octal.com">contato@octal.com</a><br>
-        Telefone: <a href="tel:+5511912345678">(11) 9 1234-5678</a>
-        </address>
-    </section>
-
+        <nav class="breadcrumb" aria-label="Localização na página">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contato.html" aria-current="page">Fale Conosco</a></li>
+            </ol>
+        </nav>
+ 
+        <section aria-labelledby="contato-titulo">
+            <h1 id="contato-titulo">Fale Conosco</h1>
+            <p>Tem alguma dúvida ou sugestão? Envie sua mensagem para nossa equipe.</p>
+ 
+            <form action="#" method="post">
+ 
+                <div class="campo">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required autocomplete="name">
+                </div>
+ 
+                <div class="campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                </div>
+ 
+                <fieldset class="campo-grupo">
+                    <legend>Gênero:</legend>
+                    <div class="radio-group">
+                        <input type="radio" id="masculino" name="genero" value="masculino">
+                        <label for="masculino">Masculino</label>
+ 
+                        <input type="radio" id="feminino" name="genero" value="feminino">
+                        <label for="feminino">Feminino</label>
+ 
+                        <input type="radio" id="outros" name="genero" value="outros">
+                        <label for="outros">Outros</label>
+                    </div>
+                </fieldset>
+ 
+                <div class="campo">
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" name="assunto" required>
+                </div>
+ 
+                <div class="campo">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+ 
+                <button type="submit">Enviar Mensagem</button>
+ 
+            </form>
+        </section>
+ 
+        <section class="contato-info" aria-labelledby="contato-info-titulo">
+            <h2 id="contato-info-titulo">Contato</h2>
+            
+            <address>
+                <ul>
+                    <li>
+                        E-mail: <a href="mailto:contato@octal.com">contato@octal.com</a>
+                    </li>
+                    <li>
+                        Telefone: <a href="tel:+5511912345678">(11) 9 1234-5678</a>
+                    </li>
+                </ul>
+            </address>
+        </section>
+ 
     </main>
     
-    <footer>
-        <section>
+    <footer class="footer">
+        <section class="footer-sobre" aria-label="Sobre a Octal">
             <h3>Octal</h3>
             <p>Os melhores eletrônicos com qualidade e preço baixo!</p>
         </section>
-
-        <section>
+ 
+        <section class="footer-atendimento" aria-label="Horários de atendimento">
             <h3>Atendimento</h3>
-            <p>08:00 às 20:00 - Segunda a Sexta;<br>
-                09:00 às 15:00 - Sábado;<br>
-                Horário de Brasília (exceto Domingo e feriados).</p>
+            
+            <ul>
+                <li>08:00 às 20:00 — Segunda a Sexta</li>
+                <li>09:00 às 15:00 — Sábado</li>
+                <li>Horário de Brasília (exceto Domingo e feriados)</li>
+            </ul>
+            <a href="contato.html">Fale Conosco</a>
         </section>
-
-        <p>&copy; 2026 Octal - Todos os direitos reservados.</p>
+ 
+        <div class="footer-copyright">
+            <p>&copy; 2026 Octal — Todos os direitos reservados.</p>
+        </div>
     </footer>
 </body>
-
+ 
 </html>
